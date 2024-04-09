@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockify</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/stockify2.png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+           
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Stock Information for {{ stock.ticker }}</h2>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Regular Market Price</td>
+                <td>{{ stock.regular_market_price }}</td>
+            </tr>
+            <tr>
+                <td>Regular Market Change</td>
+                <td>{{ stock.regular_market_change }}</td>
+            </tr>
+            <tr>
+                <td>Regular Market Change Percent</td>
+                <td>{{ stock.regular_market_change_percent }}</td>
+            </tr>
+            <tr>
+                <td>Post Market Price</td>
+                <td>{{ stock.post_market_price }}</td>
+            </tr>
+            <tr>
+                <td>Post Market Change</td>
+                <td>{{ stock.post_market_change }}</td>
+            </tr>
+            <tr>
+                <td>Post Market Change Percent</td>
+                <td>{{ stock.post_market_change_percent }}</td>
+            </tr>
+            <tr>
+                <td>Previous Close</td>
+                <td>{{ stock.previous_close }}</td>
+            </tr>
+            <tr>
+                <td>Open Value</td>
+                <td>{{ stock.open_value }}</td>
+            </tr>
+            <tr>
+                <td>Bid</td>
+                <td>{{ stock.bid }}</td>
+            </tr>
+            <tr>
+                <td>Ask</td>
+                <td>{{ stock.ask }}</td>
+            </tr>
+            <tr>
+                <td>Days Range</td>
+                <td>{{ stock.days_range }}</td>
+            </tr>
+            <tr>
+                <td>Week Range</td>
+                <td>{{ stock.week_range }}</td>
+            </tr>
+            <tr>
+                <td>Volume</td>
+                <td>{{ stock.volume }}</td>
+            </tr>
+            <tr>
+                <td>Average Volume</td>
+                <td>{{ stock.avg_volume }}</td>
+            </tr>
+            <tr>
+                <td>Market Cap</td>
+                <td>{{ stock.market_cap }}</td>
+            </tr>
+            <tr>
+                <td>Beta</td>
+                <td>{{ stock.beta }}</td>
+            </tr>
+            <tr>
+                <td>PE Ratio</td>
+                <td>{{ stock.pe_ratio }}</td>
+            </tr>
+            <tr>
+                <td>EPS</td>
+                <td>{{ stock.eps }}</td>
+            </tr>
+            <tr>
+                <td>Earnings Date</td>
+                <td>{{ stock.earnings_date }}</td>
+            </tr>
+            <tr>
+                <td>Dividend Yield</td>
+                <td>{{ stock.dividend_yield }}</td>
+            </tr>
+            <tr>
+                <td>Ex Dividend Date</td>
+                <td>{{ stock.ex_dividend_date }}</td>
+            </tr>
+            <tr>
+                <td>Year Target Estimate</td>
+                <td>{{ stock.year_target_est }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

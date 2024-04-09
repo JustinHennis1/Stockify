@@ -1,0 +1,43 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgb(48, 46, 41);
+    color: rgb(191, 195, 222);
+    border-radius: 10px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    border: 7px double black;
+    
+}
+th {
+    background-color: rgb(78, 113, 180);
+    color: rgb(7, 5, 22);
+}
+td:hover{
+    background-color: rgb(221, 223, 223);
+    color: black;
+    font-weight: bold;
+}
+#loadingOverlay {
+    display: block;
+}
+body {
+    background: linear-gradient(to bottom left, white, black);
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+h2{
+    color: midnightblue;
+}
+
+h1 {
+    text-align: center;
+    color: midnightblue;
+}
+h6 {
+    text-align: right;
+    color: midnightblue;
+}

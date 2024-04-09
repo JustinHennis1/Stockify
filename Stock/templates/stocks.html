@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockify</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/stockify2.png">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+    
+</head>
+<body>
+    <h1>Stockify</h1>
+    <h6>**data from Yahoo Finance</h6>
+    <form id="tickerForm">
+        <label for="tickerInput">Enter Ticker Symbol:</label>
+        <input type="text" id="tickerInput" name="ticker" maxlength="5" oninput="this.value = this.value.toUpperCase()">
+        <button type="submit">Search</button>
+        <div id="loadingOverlay"></div>
+    </form>
+
+    <h2>Available Stocks</h2>
+    <table id="availableStocksTable">
+        <thead >
+            <tr>
+                <th>Ticker</th>
+            </tr>
+            
+        </thead>
+        <div style="position: relative;">
+            <button id="clearButton" style="position: absolute; right: 0; height: 42px;">
+                Clear List
+            </button>
+        </div>
+        <tbody id="availableStocksBody">
+        </tbody>
+    </table>
+
+    <h2>Stock Information</h2>
+    <div id="stockInfo" style="height: 1000px;">
+    
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+    
+</body>
+</html>
